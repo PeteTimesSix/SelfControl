@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<SelfControl_ModTitle>Self Control</SelfControl_ModTitle>
+	
+	<SC_TooManyMods_Header>Too many mods!</SC_TooManyMods_Header>
+	<SC_TooManyMods_Text>{0} / {1}</SC_TooManyMods_Text>
+	
+	<SC_IronManMode>Iron Man</SC_IronManMode>
+	<SC_IronManMode_tooltip>With this option active, saves will be bricked if you unload this mod.</SC_IronManMode_tooltip>
+</LanguageData>
