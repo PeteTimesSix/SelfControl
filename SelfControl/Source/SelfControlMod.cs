@@ -28,10 +28,11 @@ namespace PeteTimesSix.SelfControl
     }
 
     [StaticConstructorOnStartup]
-    public static class ResearchReinvented_PostInit
+    public static class SelfControl_PostInit
     {
-        static ResearchReinvented_PostInit()
+        static SelfControl_PostInit()
         {
+            //just for you, Bradson
         }
     }
 }
