@@ -60,7 +60,7 @@ namespace PeteTimesSix.SelfControl.Patches
 
         private static void ClearCheck(List<ListableOption> options)
         {
-            if (ModsConfig.ActiveModsInLoadOrder.Count() > SelfControlMod.maxModCount)
+            if (SelfControlMod.ModSingleton.ModCount > SelfControlMod.Settings.maxModCount)
             {
                 options.Clear();
                 options.Add(new ListableOption_TooManyMods("SC_TooManyMods_Header".Translate(), () => { }));

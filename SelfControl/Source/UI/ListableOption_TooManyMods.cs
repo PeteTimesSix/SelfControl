@@ -38,7 +38,7 @@ namespace PeteTimesSix.SelfControl.UI
             Text.Anchor = TextAnchor.LowerCenter;
             Widgets.Label(rect.TopHalf(), label);
             Text.Anchor = TextAnchor.UpperCenter;
-            Widgets.Label(rect.BottomHalf(), "SC_TooManyMods_Text".Translate(ModsConfig.ActiveModsInLoadOrder.Count(), SelfControlMod.maxModCount));
+            Widgets.Label(rect.BottomHalf(), "SC_TooManyMods_Text".Translate(SelfControlMod.ModSingleton.ModCount, SelfControlMod.Settings.maxModCount));
 
 
             if (Widgets.ButtonInvisible(rect, true))
