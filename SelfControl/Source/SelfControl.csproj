@@ -17,18 +17,29 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>embedded</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\v1.3\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\SelfControl\v1.3\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>embedded</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\v1.3\Assemblies\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\SelfControl\v1.3\Assemblies\</OutputPath>
+    <DefineConstants>TRACE;NORMAL</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - Milk|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\SelfControlMilk\v1.3\Assemblies\</OutputPath>
+    <DefineConstants>TRACE;MILK</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>embedded</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Core" />
@@ -39,11 +50,19 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\Dialog_UnlockSelfControl.cs" />
+    <Compile Include="Extensions\Listing_StandardExtensions.cs" />
     <Compile Include="Patches\MainMenuDrawer_DoMainMenuControls_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rimworld\Textures_Custom.cs" />
     <Compile Include="SelfControlMod.cs" />
+    <Compile Include="SelfControl_Settings.cs" />
     <Compile Include="UI\ListableOption_TooManyMods.cs" />
+    <Compile Include="UI\Widgets_Custom.cs" />
     <Compile Include="Utilities\CircularBuffer.cs" />
+    <Compile Include="Extensions\ModMetaDataExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Utilities\HotSwap.cs" />
     <Compile Include="Utilities\TranspilerUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,8 +85,6 @@
   <PropertyGroup>
     <PostBuildEvent>PATH
 
-"$(ProjectDir)Install.bat" $(ConfigurationName) "$(ProjectDir)" "$(ProjectName)" "About Assemblies ModSpecific Defs Languages Textures v1.3" "LoadFolders.xml"
-
-</PostBuildEvent>
+"$(ProjectDir)Install.bat" $(ConfigurationName) "$(ProjectDir)" "$(ProjectName)" "SelfControl SelfControlMilk" "LoadFolders.xml"</PostBuildEvent>
   </PropertyGroup>
 </Project>

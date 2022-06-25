@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace PeteTimesSix.SelfControl.Utilities
+namespace PeteTimesSix.SelfControl.Extensions
 {
     public static class ModMetaDataExtensions
     {

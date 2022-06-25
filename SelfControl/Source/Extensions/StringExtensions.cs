@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PeteTimesSix.SelfControl.Utilities
+namespace PeteTimesSix.SelfControl.Extensions
 {
     public static class StringExtensions
     {

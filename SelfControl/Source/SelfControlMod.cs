@@ -8,8 +8,9 @@ using UnityEngine;
 using HarmonyLib;
 using System.Reflection;
 using RimWorld;
-using PeteTimesSix.SelfControl.Utilities;
+using PeteTimesSix.SelfControl.Extensions;
 using System.Collections.ObjectModel;
+using PeteTimesSix.SelfControl.UI;
 
 namespace PeteTimesSix.SelfControl
 {
@@ -37,7 +38,7 @@ namespace PeteTimesSix.SelfControl
                 if(_modFileSizesCached == null) 
                 {
                     Dictionary<ModMetaData, long> modFileSizes = new Dictionary<ModMetaData, long>();
-                    foreach(var mod in ModsConfig.ActiveModsInLoadOrder)
+                    foreach(var mod in ModsConfig.ActiveModsInLoadOrder.Where(m => !m.IsIgnoredBySelfControl()))
                     {
                         modFileSizes[mod] = mod.GetTotalFileSize();
                     }
@@ -54,6 +55,12 @@ namespace PeteTimesSix.SelfControl
 
             var harmony = new Harmony("PeteTimesSix.SelfControl");
             harmony.PatchAll();
+        }
+
+
+        public override string SettingsCategory()
+        {
+            return "SelfControl_ModTitle".Translate();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
