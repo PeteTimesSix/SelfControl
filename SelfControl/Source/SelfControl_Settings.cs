@@ -13,7 +13,7 @@ namespace PeteTimesSix.SelfControl.UI
     public class SelfControl_Settings : ModSettings
     {
 
-        public const int ABSOLUTE_MIN_MODS = 5;
+        public const int ABSOLUTE_MIN_MODS = 1;
         public const int ABSOLUTE_MAX_MODS = 500;
 #if NORMAL
         public const int DEFAULT_MAX_MODS = 100;
@@ -48,12 +48,12 @@ namespace PeteTimesSix.SelfControl.UI
             restOfRect.y += 50;
             restOfRect.height -= 50;
 
-            Listing_Standard prelist = new Listing_Standard();
+            /*Listing_Standard prelist = new Listing_Standard();
             prelist.Begin(headerRect);
 
             prelist.GapLine();
 
-            prelist.End();
+            prelist.End();*/
 
             bool needToScroll = cachedScrollHeight > outerRect.height;
             var viewRect = new Rect(restOfRect);
