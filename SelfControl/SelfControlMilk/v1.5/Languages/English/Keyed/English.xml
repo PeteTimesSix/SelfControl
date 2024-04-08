@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<SelfControl_ModTitle>Self Control</SelfControl_ModTitle>
+	
+	<SC_TooManyMods_Header>Too many mods!</SC_TooManyMods_Header>
+	<SC_TooManyMods_Text>{0} / {1}</SC_TooManyMods_Text>
+	
+	<SC_MaxModsSlider_Label>Maximum mods: </SC_MaxModsSlider_Label>
+	
+	<SC_KeyholderMode_on>Max mods locked!</SC_KeyholderMode_on>
+	<SC_KeyholderMode_off>Lock max mods</SC_KeyholderMode_off>
+	<SC_KeyholderMode_dev>Dev toggle</SC_KeyholderMode_dev>
+	<SC_KeyholderMode_tooltip>Allow/disallow changing the max mods value. Might not be as easy to turn off as it is to turn on...</SC_KeyholderMode_tooltip>
+	
+	<SC_KeyholderModeUndo_Label>Want control back?</SC_KeyholderModeUndo_Label>
+	<SC_KeyholderModeUndo_Button>CLICK HERE</SC_KeyholderModeUndo_Button>
+	
+	<SC_DefeatedBy_Header>You were slain by:</SC_DefeatedBy_Header>
+	<SC_DefeatedBy_Footer>Are you absolutely sure you need it?</SC_DefeatedBy_Footer>
+	<SC_Start>Start!</SC_Start>
+	<SC_StartAgain>Try again!</SC_StartAgain>
+</LanguageData>

@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>embedded</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\SelfControl\v1.4\Assemblies\</OutputPath>
+    <OutputPath>..\SelfControl\v1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE;NORMAL</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -33,7 +33,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - Milk|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\SelfControlMilk\v1.4\Assemblies\</OutputPath>
+    <OutputPath>..\SelfControlMilk\v1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE;MILK</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>embedded</DebugType>
@@ -81,10 +81,10 @@
   <ItemGroup />
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.4.*-*</Version>
+      <Version>1.5.4055-beta</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-      <Version>2.2.2</Version>
+      <Version>2.3.3</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
